@@ -33,17 +33,5 @@ jobs:
       uses: cloudbees/plantuml-github-action@v1.1.0
       with:
         # Arguments for PlantUML tool
-        args: -v -tpng '/docs/myarch.puml'
-      
-  
-  # This workflow contains a single job called "greet"
-  greet:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-    # Runs a single command using the runners shell
-    - name: Send greeting
-      run: echo "Hello ${{ github.event.inputs.name }}"
+        args: -v -tpng './docs/myarch.puml'
+    
