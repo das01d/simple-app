@@ -33,8 +33,8 @@ jobs:
       - name: Push Local Changes
         uses:  stefanzweifel/git-auto-commit-action@v4.1.2 
         with: 
-          commit_user_name: "PlantUML Generator"
+          # commit_user_name: "PlantUML Generator"
           # commit_user_email: "nobody@gmail.com"
-          commit_author: "PlantUML Generator <nobody@gmail.com>"
+          # commit_author: "PlantUML Generator <nobody@gmail.com>"
           commit_message: "Generate images for PlantUML diagrams" 
-          branch: ${{ github.head_ref }}
+          #  branch: ${{ github.head_ref }}
