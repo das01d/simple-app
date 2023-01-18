@@ -3,7 +3,7 @@ on:
   push:
     paths:
       - '**.puml'
-      - '**\*.plantuml.yml'
+      - '**/*.plantuml.yml'
     branches:
       - master
 jobs:
