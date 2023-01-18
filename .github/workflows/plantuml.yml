@@ -26,6 +26,12 @@ jobs:
       uses: actions/checkout@v2
       with:
         fetch-depth: 0
+        
+    - name: pwd
+      run: pwd
+    
+    - name: ls
+      run: ls
           
     - name: PlantUML Generator
       # You may pin to the exact commit or the version.
