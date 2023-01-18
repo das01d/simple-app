@@ -18,10 +18,29 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  make-docs:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Source 
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+          
+    - name: PlantUML Generator
+      # You may pin to the exact commit or the version.
+      # uses: cloudbees/plantuml-github-action@e84052d8b2b11b5a0cc9965fadd1cd9e6f77c5ac
+      uses: cloudbees/plantuml-github-action@v1.1.0
+      with:
+        # Arguments for PlantUML tool
+        args: -v -tpng '/docs/myarch.puml'
+      
+  
   # This workflow contains a single job called "greet"
   greet:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
