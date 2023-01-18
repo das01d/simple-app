@@ -20,14 +20,16 @@ jobs:
         run: |
           pwd
           ls -l ./docs
-      - name: Generate SVG Diagrams
-        uses: cloudbees/plantuml-github-action@master
-        with:
-            args: -v -tsvg docs
-      - name: Generate PNG Diagrams
-        uses: cloudbees/plantuml-github-action@master
-        with:
-            args: -v -tpng docs
+      - name: use cli
+        run: java -jar - ./docs/plantuml.jar -v -tsvg ./docs
+      # - name: Generate SVG Diagrams
+      #   uses: cloudbees/plantuml-github-action@master
+      #   with:
+      #       args: -v -tsvg docs
+      # - name: Generate PNG Diagrams
+      #   uses: cloudbees/plantuml-github-action@master
+      #   with:
+      #       args: -v -tpng docs
       - name: Push Local Changes
         uses:  stefanzweifel/git-auto-commit-action@v4.1.2 
         with: 
